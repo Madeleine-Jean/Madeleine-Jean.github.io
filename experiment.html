@@ -23,7 +23,7 @@
   <body>
   </body>
   <script>
-      
+           
       //define welcome message
       var welcome = {
               type: "html-keyboard-response",
@@ -44,7 +44,12 @@
 
       /*define masculinity field task*/
       //array of image paths for the free sort object
-        var sorting_stimuli = ["/images/ambarw.1.jpg","/images/dakram.20.jpg","/images/dgemen.20.jpg","/images/gmwate.1.jpg","/images/jdbenm.1.jpg","/images/muthay.1.jpg","/images/pmspry.20.jpg","/images/pspliu.1.jpg","/images/saduah.1.jpg","/images/sirmcb.20.jpg","/images/sjcutt.20.jpg","/images/skumar.1.jpg"];
+        var sorting_stimuli = ["/images/ambarw.1.jpg","/images/dakram.20.jpg",
+                               "/images/dgemen.20.jpg", "/images/gmwate.1.jpg",
+                               "/images/jdbenm.1.jpg", "/images/muthay.1.jpg",
+                               "/images/pmspry.20.jpg", "/images/pspliu.1.jpg",
+                               "/images/saduah.1.jpg", "/images/sirmcb.20.jpg",
+                               "/images/sjcutt.20.jpg", "/images/skumar.1.jpg"];
          
       //define free sort object
         var sort = {
@@ -84,7 +89,7 @@
       //define description task object
       var describe = {
           type: 'survey-text',
-          questions: [{prompt: ''}],
+          questions: [{prompt: '', value: '', rows: 10, columns: 50}],
           preamble: jsPsych.timelineVariable('preamble'),
       }
       
@@ -135,10 +140,32 @@
           timeline_variables: rating_stimuli,
           randomize_order: true,
         }
+        
+        //define the demographic survey object
+        var demographics = {
+          type: 'survey-text',
+          questions: [
+            {prompt: 'How old are you?', value: '', rows: 1, columns: 3},
+            {prompt: 'What gender do you identify as?', value: '', rows: 1, columns: 50},
+            {prompt: 'What race(s) and/or ethnicit(ies) do you identify as?', value: '', rows:1, columns: 50},
+            {prompt: 'Where have you lived, and for what years of your life?', value: '', rows:10, columns: 50}
+          ]
+        };
+      
+        //define the closing screen
+      
+        var goodbye = {
+          type: "html-keyboard-response",
+          stimulus: "<p>Thank you for participating! The experiment is done. "+
+            //"If you'd like to learn more about the study, "+
+            //"please click <a>here</a>. " +
+            "If you have any questions, the primary researcher may be contacted "+
+            "at campbell-kibler.1@osu.edu. </p>",
+        }
 
         /* start the experiment */
         jsPsych.init({
-            timeline: [welcome, instructions_field, sort, instructions_description, desc_proc, instructions_rate, rating_procedure]
+            timeline: [welcome, instructions_field, sort, instructions_description, desc_proc, instructions_rate, rating_procedure, demographics, goodbye]
         });
     </script>
 </html>
