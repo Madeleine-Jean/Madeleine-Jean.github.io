@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Gender Study</title>
+      <!-- jQuery & jQuery UI libraries are requried for sort trials -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <!-- this is the actual JS library that runs everything -->
+    <script src="/jspsych-5.0.3/jspsych.js"></script>
+      <!-- these plugins are needed for each of the kinds of trials -->
+    <script src="/jspsych-5.0.3/plugins/jspsych-text.js" type="text/javascript"></script>
+    <script src="/jspsych-5.0.3/plugins/jspsych-free-sort.js" type="text/javascript"></script>
+    <script src="/jspsych-5.0.3/plugins/jspsych-survey-text.js" type="text/javascript"></script>
+      <!-- and then this is the css that makes it look pretty -->
+    <link href="/jspsych-5.0.3/css/jspsych.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  </body>
+  <script>
+      /* define welcome message */
+        var welcome_block = {
+            type: "text",
+            text: "Welcome to the experiment! There will be three tasks. Press any key to begin."
+        };
+      /* define instructions for field task */
+        var instructions_block_1 = {
+            type: "text",
+            text: "<p>In the first task, you will see the pictures of a few people. "+
+              "You can click and drag the pictures to rearrange them. "+
+              "Please group the pictures based on how similar you think the people are "+
+              "<strong>as people</strong>. Which ones would hang out with each other? "+
+              "When you are done with the task, you may press any key to move on. "+
+              "</p><p>When you are done reading these instructions, you may press any key to begin "+
+              "the task.</p>",
+            timing_post_trial: 2000
+        };
+      /*define masculinity field task*/
+        
+      //array of image paths for the free sort object
+        var sorting_stimuli = ["/images/ambarw.1.jpg","/images/dakram.20.jpg","/images/dgemen.20.jpg","/images/gmwate.1.jpg","/images/jdbenm.1.jpg","/images/muthay.1.jpg","/images/pmspry.20.jpg","/images/pspliu.1.jpg","/images/saduah.1.jpg","/images/sirmcb.20.jpg","/images/sjcutt.20.jpg","/images/skumar.1.jpg"];
+         
+      //define free sort object
+        var sort = {
+            type: 'free-sort',
+            stimuli: sorting_stimuli,
+            sort_area_height: 600,	
+            prompt: "<p>Click and drag the images below to sort them so that similar items are close together.</p>"
+        };
+        
+      //define instructions for description task
+        var instructions_block_2 = {
+            type: "text",
+            text: "<p>In the next task, you will see each of the pictures again, "+
+           "as well as a text box. This time, describe each man as a person. "+
+           "What kind of a man is he? When you are done with each picture, "+
+           "you may press any key to see the next one. </p><p> When you are done "+
+           "with these instructions, you may press any key to begin the task.</p>",
+            timing_post_trial: 2000
+        };
+
+      
+    /* Eventually we should get the code working for random-order presentation
+            but brute force works for now
+      var text_response_stimuli = [
+          { preamble: '<img src="/images/ambarw.1.jpg"></img>' },
+          { preamble: '<img src="/images/dakram.20.jpg"></img>' },
+          { preamble: '<img src="/images/dgemen.20.jpg"></img>' },
+          { preamble: '<img src="/images/gmwate.1.jpg"></img>' },
+          { preamble: '<img src="/images/jdbenm.1.jpg"></img>' },
+          { preamble: '<img src="/images/muthay.1.jpg"></img>' },
+          { preamble: '<img src="/images/pmspry.20.jpg"></img>' },
+          { preamble: '<img src="/images/pspliu.1.jpg"></img>' },
+          { preamble: '<img src="/images/saduah.1.jpg"></img>' },
+          { preamble: '<img src="/images/sirmcb.20.jpg"></img>' },
+          { preamble: '<img src="/images/sjcutt.20.jpg"></img>' },
+          { preamble: '<img src="/images/skumar.1.jpg"></img>' },
+      ];
+      
+    
+      var description = {
+          type: 'survey-text',
+          questions: ["What kind of person is this?"],
+          rows: 3,
+          preamble: jsPsych.timelineVariable('preamble')
+      };
+      
+      var description_procedure = {
+          timeline: [description],
+          timeline_variables: text_response_stimuli,
+          randomize_order: true
+      }
+      */
+      
+      var description_1 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/ambarw.1.jpg"></img>'
+      }
+      var description_2 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/dakram.20.jpg"></img>'
+      }
+      var description_3 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/dgemen.20.jpg"></img>'
+      }
+      var description_4 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/gmwate.1.jpg"></img>'
+      }
+      var description_5 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/jdbenm.1.jpg"></img>'
+      }
+      var description_6 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/muthay.1.jpg"></img>'
+      }
+      var description_7 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/pmspry.20.jpg"></img>'
+      }
+      var description_8 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/pspliu.1.jpg"></img>'
+      }
+      var description_9 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/saduah.1.jpg"></img>'
+      }
+      var description_10 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/sirmcb.20.jpg"></img>'
+      }
+      var description_11 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/sjcutt.20.jpg"></img>'
+      }
+      var description_12 = {
+          type: 'survey-text',
+          questions: [""],
+          rows: 3,
+          preamble: '<img src="/images/skumar.1.jpg"></img>'
+      }
+      
+      
+      
+    
+      
+      /*define instructions fo rating task*/
+        var instructions_block_3 = {
+            type: "text",
+            text: "<p> In the final task, you'll see each of the pictures "+
+            "once more, with a scale beneath them. On the scale please indicate "+
+            "how <strong>masculine</strong> each person is, however you think of "+
+            "masculinity. When you are done with a picture, you may press any key "+
+            "to move on to the next one.</p><p>When you are done with these "+
+            "instructions, press any key to begin the task.</p>",
+            timing_post_trial:2000
+        }
+        
+        /*define arrays to hold likert object info*/
+        var scale = ["Very not masculine", "Somewhat not masculine", "Neutral", "Somewhat masculine", "Very masculine"];
+        var questions = [""];
+        
+      /*define likert pages
+      Like the description pages, these will eventually be collapsed into a nested timeline
+      Until then, this version *does* work */
+      var likert_1 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/ambarw.1.jpg"></img>' //can we center this?
+        };
+      var likert_2 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/dakram.20.jpg"></img>' //can we center this?
+        };
+      var likert_3 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/dgemen.20.jpg"></img>' //can we center this?
+        };
+      var likert_4 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/gmwate.1.jpg"></img>' //can we center this?
+        };
+      var likert_5 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/jdbenm.1.jpg"></img>' //can we center this?
+        };
+      var likert_6 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/muthay.1.jpg"></img>' //can we center this?
+        };
+      var likert_7 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/pmspry.20.jpg"></img>' //can we center this?
+        };
+      var likert_8 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/pspliu.1.jpg"></img>' //can we center this?
+        };
+      var likert_9 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/saduah.1.jpg"></img>' //can we center this?
+        };
+      var likert_10 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/sirmcb.20.jpg"></img>' //can we center this?
+        };
+      var likert_11 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/sjcutt.20.jpg"></img>' //can we center this?
+        };
+      var likert_12 = {
+            type: 'survey-likert',
+            questions: [questions],
+            labels: [scale],
+            preamble: '<img src="/images/skumar.1.jpg"></img>' //can we center this?
+        };
+
+        /* create experiment definition array */
+        var timeline = [];
+      timeline.push(welcome_block);
+      timeline.push(instructions_block_1);
+      
+      timeline.push(sort);
+      //one of the bugs is that the experiment sticks on this part if it's included
+      
+      timeline.push(instructions_block_2);
+      
+      timeline.push(description_1);
+        timeline.push(description_2);
+        timeline.push(description_3);
+        timeline.push(description_4);
+        timeline.push(description_5);
+        timeline.push(description_6);
+        timeline.push(description_7);
+        timeline.push(description_8);
+        timeline.push(description_9);
+        timeline.push(description_10);
+        timeline.push(description_11);
+        timeline.push(description_12);
+      
+      timeline.push(instructions_block_3);
+      
+      timeline.push(likert_1);
+      timeline.push(likert_2);
+      timeline.push(likert_3);
+      timeline.push(likert_4);
+      timeline.push(likert_5);
+      timeline.push(likert_6);
+      timeline.push(likert_7);
+      timeline.push(likert_8);
+      timeline.push(likert_9);
+      timeline.push(likert_10);
+      timeline.push(likert_11);
+      timeline.push(likert_12);
+
+        /* start the experiment */
+        jsPsych.init({
+          timeline: timeline
+        });
+    </script>
+</html>
