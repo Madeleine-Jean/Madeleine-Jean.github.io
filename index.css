@@ -1,18 +1,171 @@
 * {
-  /*background-color:#E5E5E5;  
-    /*272C2E*/
-    background-color:#272C2E;
+    background-color:#D7CEC7;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*CSS for disqus thread on sigma xi website*/
+#disqus_thread {
+    position: relative;
+    top: 100px;
+    padding: 20px;
+}
+
+/*CSS for picture background*/
+#portrait {
+    background: url("http://i67.tinypic.com/kcz0hv.jpg") no-repeat left top;
+}
+.banner {
+    font-family: Trebuchet MS,sans-serif;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+    margin-top: 100px;
+}
+#me {
+    position: absolute;
+}
+
+/*styling for top nav buttons*/
+.share {
+    border: 1px solid LightGrey;
+    padding: 10px 0px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-family: Garamond;
+}
+.share a {
+    background: #76323F;
+    border: 1px solid #76323F;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px;
+    margin: 10px;
+}
+.share a:hover {
+    background: white;
+    border: 1px solid #76323F;
+    color: #76323F;
+}
+#top {
+    border: none;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+}
+
+/*styling for individual posters*/
+.poster {
+    border: thin solid #C09F80;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+}
+.poster-details {
+    font-size: 18px;
+    position: right;
+    font-family: Garamond;
+    text-align: right;
+    margin-top: 0px;
+    padding: 5px 0px;
+}
+
+/*styling for masc website*/
+#title{
+    background-color: #565656;
+}
+#title h1{
+    top: 350px;
+    color: #D7CEC7;
+    font-family: sans-serif;
+}
+#abstract {
+    padding: 20px;
+    height: 600px;
+}
+#abstract p{
+    text-align: right;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #565656;
+    margin-top: 80px;
+}
+#slideshow{
+    background-color: #565656;
+    height: 600px;
+}
+#slideshow iframe{
+    top: 10px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3%;
+    background-color: inherit;
+}
+#video{
+    height: 600px;
+}
+#video iframe{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+#authors{
+    background-color: #565656;
+    height: 600px;
+}
+.test {
+    background-color: #565656;
+}
+#one {
+    background-color: inherit;
+    height: 600px;
+    width: 440px;
+    position: absolute;
+}
+#one img{
+    background-color: inherit;
+    padding: 5px;
+}
+#two {
+    background-color: inherit;
+    margin-left: 440px;
+    height: 600px;
+    text-align: right;
+    overflow: scroll;
+}
+#two p{
+    color: #D7CEC7;
+    background-color: inherit;
+    margin: 100px 20px;
+    font-size: 40px;
+    font-family: sans-serif;
+    padding-top: 10%;
+    
+}
+#two a{
+    background-color: inherit;
+    color: #C09F80;
+    margin: 0px;
+}
+#two a:hover{
+    color: #76323F;
+}
+
+
+/*General styling*/
 h1 {
     font-family: Roboto;
     font-size: 55px;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0);
-    color:#E5E5E5;
+    color:#565656;
     position: relative;
     left: 10px;
     top: 10px;
@@ -23,7 +176,7 @@ h2 {
     font-size: 20px;
     width: 45%;
     background-color: rgba(0, 0, 0, 0);
-    color:#E5E5E5;
+    color:#565656;
     position: relative;
     left: 10px;
     padding: 8px;
@@ -33,7 +186,7 @@ h3 {
     font-family: Roboto;
     font-size: 50px;
     font-weight: 600;
-    color: #E7EBE4;
+    color: #565656;
     padding-bottom: 10px;
     margin-top: 10px;
     font-weight: normal;
@@ -43,63 +196,106 @@ h4 {
     font-family: Roboto;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
-    color: #E7EBE4;
+    color: #565656;
     margin-top:15px;
     margin-bottom: 10px;
     font-weight: normal;
 }
 
 img {
-    width: 100%;
+    display: inline-block;
+    float: left;
+    padding: 5px;
 }
 
 p,ul,li{
     font-size: 20px;
-    color: #E7EBE4;
+    color: #565656;
     line-height: 1.3;
 }
 
-#banner {
+ul {
+    margin-left: 30px;
+}
+
+.section {
+    padding: 20px;
+    margin: 5px;
+    overflow: scroll;
+}
+
+.light {
+    color:#D7CEC7; 
+}* {
+    background-color:#D7CEC7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CSS for disqus thread on sigma xi website*/
+#disqus_thread {
+    position: relative;
+    top: 100px;
+    padding: 20px;
+}
+
+/*CSS for picture background*/
+#portrait {
+    background: url("http://i67.tinypic.com/kcz0hv.jpg") no-repeat left top;
+}
+.banner {
     font-family: Trebuchet MS,sans-serif;
     width: 100%;
     height: 700px;
     position: relative;
-    top: 100px;
-    /*background-image: url("http://i67.tinypic.com/kcz0hv.jpg");
-    background-size: cover;
-    background-position: center;*/
-    background: url("http://i67.tinypic.com/kcz0hv.jpg") no-repeat left top;
     background-size: cover;
     z-index: 1;
+    margin-top: 100px;
 }
-
 #me {
     position: absolute;
 }
 
-#details {
-    width: 100%;
+/*styling for top nav buttons*/
+.share {
+    border: 1px solid LightGrey;
+    padding: 10px 0px;
     position: relative;
-    top: 100px;
-    margin-left: 10px;
-    /*border: solid white;*/
+    text-align: center;
+    width: 100%;
+    font-family: Garamond;
 }
-.section {
-    padding: 20px;
-    /*border: solid white;*/
-    margin: 5px;
-    border-radius: 5px;
-    overflow: scroll;
+.share a {
+    background: #76323F;
+    border: 1px solid #76323F;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px;
+    margin: 10px;
+}
+.share a:hover {
+    background: white;
+    border: 1px solid #76323F;
+    color: #76323F;
+}
+#top {
+    border: none;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
 }
 
+/*styling for individual posters*/
 .poster {
-    border: thin solid white;
+    border: thin solid #C09F80;
     margin-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 15px;
 }
-
 .poster-details {
     font-size: 18px;
     position: right;
@@ -109,44 +305,153 @@ p,ul,li{
     padding: 5px 0px;
 }
 
-a {
-    color: lightblue;
+/*styling for masc website*/
+#title{
+    background-color: #565656;
+}
+#title h1{
+    top: 350px;
+    color: #D7CEC7;
+    font-family: sans-serif;
+}
+#abstract {
+    padding: 20px;
+    height: 600px;
+}
+#abstract p{
+    text-align: right;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #565656;
+    margin-top: 80px;
+}
+#slideshow{
+    background-color: #565656;
+    height: 600px;
+}
+#slideshow iframe{
+    top: 10px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3%;
+    background-color: inherit;
+}
+#video{
+    height: 600px;
+}
+#video iframe{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+#authors{
+    background-color: #565656;
+    height: 600px;
+}
+.test {
+    background-color: #565656;
+}
+#one {
+    background-color: inherit;
+    height: 600px;
+    width: 440px;
+    position: absolute;
+}
+#one img{
+    background-color: inherit;
+    padding: 5px;
+}
+#two {
+    background-color: inherit;
+    margin-left: 440px;
+    height: 600px;
+    text-align: right;
+    overflow: scroll;
+}
+#two p{
+    color: #D7CEC7;
+    background-color: inherit;
+    margin: 100px 20px;
+    font-size: 40px;
+    font-family: sans-serif;
+    padding-top: 10%;
+    
+}
+#two a{
+    background-color: inherit;
+    color: #C09F80;
+    margin: 0px;
+}
+#two a:hover{
+    color: #76323F;
 }
 
-a:hover{
-    color: white;
-}
 
-.share {
-    border: 1px solid LightGrey;
-    padding: 10px 0px;
+/*General styling*/
+h1 {
+    font-family: Roboto;
+    font-size: 55px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    color:#565656;
     position: relative;
-    top: 100px;
-    text-align: center;
-    width: 100%;
-    font-family: Garamond;
+    left: 10px;
+    top: 10px;
 }
 
-.share a {
-  background: #4C5487;
-  border: 1px solid #4C5487;
-  border-radius: 3px;
-  color: white;
-  display: inline-block;
-  text-decoration: none;
-  padding: 14px;
-    margin: 10px;
+h2 {
+    font-family: Roboto;
+    font-size: 20px;
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0);
+    color:#565656;
+    position: relative;
+    left: 10px;
+    padding: 8px;
 }
 
-.share a:hover {
-  background: white;
-  border: 1px solid #4C5487;
-  color: #4C5487;
+h3 {
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 600;
+    color: #565656;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-weight: normal;
 }
 
-#top {
-    border: none;
-    position: fixed;
-    top: 0px;
-    z-index: 2;
+h4 {
+    font-family: Roboto;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #565656;
+    margin-top:15px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+img {
+    display: inline-block;
+    float: left;
+    padding: 5px;
+}
+
+p,ul,li{
+    font-size: 20px;
+    color: #565656;
+    line-height: 1.3;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+.section {
+    padding: 20px;
+    margin: 5px;
+    overflow: scroll;
+}
+
+.light {
+    color:#D7CEC7; 
 }
