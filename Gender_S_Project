@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> Men & 'S' </title>
+        <link href="/me.css" type="text/css" rel="stylesheet">
+	</head>
+    
+	<body>
+        <div class="share" id="top">
+            <a href="#title">Top</a>
+            <a href="#abstract">Abstract</a>
+            <a href="#slides">Slideshow</a>
+            <a href="#video">Video</a>
+            <a href="#authors">Authors</a>
+            <a href="#disqus_thread">Discussion</a>
+        </div>
+        
+        <div>
+            
+            <div class="banner" id="title">
+                <h1> Men and 'S': speaking, hearing, percieving</h1>
+            </div>
+            
+            <div class="section" id="abstract">
+                <p> The only difference between an /s/ sound, as in "sort", and an /sh/ sound, as in "short", is how far back in their mouth the speaker's tongue is. The two sounds actually exist on a continuum, and English speakers arbitrarily decide where to draw the line both when they're speaking and when they're listening. Women tend to put their tongues further forward than men do, and listeners tend to place the boundary further back for men. That is, people are more lenient when men pronounce their s's like sh's—like Sean Connery! And, when men put their s's further forward, they're usually perceived as less masculine. The primary question in this project is whether these three phenomena—how people speak, what people hear, and what they think about speakers—are cognitively related, or just socially. Learn more below! </p>
+            </div>
+            
+            <div id="slideshow">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQk1sBRcv4edRBcZ22vNsfe7zm9nSfLk4NhEJEVrzenLMNB56lSi7-xcnRsBEKVmpyZW3FWSEkxOaiP/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+            
+            <div id="video">
+                <iframe width="630" height="472.5"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+            </div>
+            
+            <div id="authors">
+                <div class="test" id="one">
+                    <img src="http://i67.tinypic.com/kcz0hv.jpg" alt="Picture of Author" height="300" width="400">
+                    <img src="https://linguistics.osu.edu/sites/linguistics.osu.edu/files/styles/slider/public/IMG_3482.JPG?itok=dIKvxNLL" alt="Picture of Author" height="300" width="400">
+                </div>
+                <div class="test" id="two">
+                    <p> The authors of this project are <a href="/Me.html">Madeleine Jean</a>, an undergraduate at Kenyon College majoring in anthropology and <a href="https://linguistics.osu.edu/people/campbell-kibler.1">Kathryn Campbell-Kibler</a>, Associate Professor of Linguistics at The Ohio State University.</p>
+                </div>
+            </div>
+            
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "http://madeleine-jean.github.io/masculinity";  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = mascproj; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://mascproj.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           
+        </div>
+
+    </body>
+</html>
